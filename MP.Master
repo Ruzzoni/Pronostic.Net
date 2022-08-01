@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MP.master.cs" Inherits="PronosticWeb.MP" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style12
+        {
+            height: 74px;
+            background-color: #FFFFFF;
+            text-align: center;
+        }
+        .style13
+        {
+            height: 74px;
+            width: 213px;
+            background-color: #FFFFFF;
+        }
+        .style14
+        {
+            width: 213px;
+            background-color: #FFFFFF;
+        }
+        .style15
+        {
+            height: 74px;
+            width: 939px;
+            color: #0066CC;
+            background-color: #FFFFFF;
+            text-align: left;
+        }
+        .style16
+        {
+            height: 74px;
+            width: 395px;
+            color: #0066CC;
+            background-color: #FFFFFF;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table style="width: 100%; height: 404px;">
+        <tr>
+            <td class="style13">
+            </td>
+            <td class="style16">
+            <strong style="font-family: 'Hurmit NF'; font-size: xx-large; color: #003399; background-color: #FFFFFF;">PRONOSTICO BIOS</strong></td>
+            <td class="style15">
+                <asp:HyperLink ID="ABMpais" runat="server" NavigateUrl="~/ABM_Paises.aspx" 
+                    style="font-weight: 700; color: #000000; background-color: #9DE9FF">ABM Pais</asp:HyperLink>
+            &nbsp;
+                <asp:HyperLink ID="ABMciudad" runat="server" 
+                    style="font-weight: 700; color: #000000; background-color: #9DE9FF" 
+                    NavigateUrl="~/ABMCiudades.aspx">ABM Ciudad</asp:HyperLink>
+&nbsp;
+                <asp:HyperLink ID="ABMusuarios" runat="server" 
+                    style="color: #000000; font-weight: 700; background-color: #9DE9FF" 
+                    NavigateUrl="~/ABMUsuarios.aspx">ABM Usuarios</asp:HyperLink>
+&nbsp;
+                <asp:HyperLink ID="RegistPronostic" runat="server" 
+                    style="font-weight: 700; color: #000000; background-color: #9DE9FF" 
+                    NavigateUrl="~/RegistrarUnPronostico.aspx">Registrar Pronostico</asp:HyperLink>
+&nbsp;
+                <asp:HyperLink ID="ListProXCiudad" runat="server" 
+                    style="font-weight: 700; color: #000000; background-color: #9DE9FF" 
+                    NavigateUrl="~/ListadoDePronosticoPorCiudad.aspx">Listado de Pronósticos por Ciudad</asp:HyperLink>
+&nbsp;
+                <asp:HyperLink ID="ListProXDia" runat="server" 
+                    style="font-weight: 700; color: #000000; background-color: #9DE9FF" 
+                    NavigateUrl="~/ListadoDePronosticoParaElDia.aspx"> Listado Pronósticos para el día</asp:HyperLink>
+            </td>
+            <td class="style12">
+            &nbsp;<asp:Label ID="txtUserLogin" runat="server"></asp:Label>
+                <br />
+                <br />
+                <asp:Button ID="LogOut" runat="server" Text="Cerrar Sesion" Width="108px" 
+                    onclick="LogOut_Click" />
+            </td>
+        </tr>
+        <tr>
+            <td class="style14">
+                &nbsp;</td>
+            <td colspan="3">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
